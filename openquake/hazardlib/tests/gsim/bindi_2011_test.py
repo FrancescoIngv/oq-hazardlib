@@ -19,7 +19,7 @@
 # Test tables elaboratated from data provided directly from the authors.
 #
 
-from openquake.hazardlib.gsim.bindi_et_al_2011 import BindiEtAl2011
+from openquake.hazardlib.gsim.bindi_2011 import BindiEtAl2011
 from openquake.hazardlib.tests.gsim.utils import BaseGSIMTestCase
 
 

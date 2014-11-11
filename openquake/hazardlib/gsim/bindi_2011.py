@@ -19,8 +19,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-Module exports :class:`Bindietal2011`.
-Module exports :class:`Bindietal2011NoRake`.
+Module exports :class:`BindiEtAl2011`.
+Module exports :class:`BindiEtAl2011NoRake`.
 """
 from __future__ import division
 
@@ -264,18 +264,4 @@ class BindiEtAl2011(GMPE):
     """)
 
 
-class Bindietal2011NoRake(BindiEtAl2011):
-    """
-    Implements the Bindi et al. (2011) GMPE for the case when the mechanism
-    type is unspecfied
-    """
-    #: Required rupture parameters are magnitude (equation 1)
-    REQUIRES_RUPTURE_PARAMETERS = set(('mag',))
-
-    def _get_mechanism(self, rup, C):
-        """
-        Returns the ''unspecified'' style-of-faulting coefficient
-        """
-        return C['f4']
-        
         
